@@ -110,63 +110,28 @@
                 <h2 class="h2 article-title">About me</h2>
             </header>
             <section class="about-text">
+                {% for about in abouts %}
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et
-                    dolore magna aliqua. Egestas purus viverra accumsan in nisl nisi. Arcu cursus vitae congue mauris
-                    rhoncus
-                    aenean vel elit scelerisque.
+                    {{about.text|safe}}
                 </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis hic, earum nobis nesciunt
-                    necessitatibus tempora totam suscipit sint, deserunt qui laborum magnam recusandae ex, labore ab
-                    voluptatibus ipsam aliquam esse!
-                    Voluptatibus mollitia ipsa ab tempore natus repellendus rerum id iure. Recusandae aut dolore minus,
-                    ducimus
-                    eaque cupiditate officiis maiores exercitationem provident, sint porro inventore eius facere labore
-                    magnam
-                    error odio.
-                </p>
+                {% endfor %}
+              
             </section>
+            
               <section class="skill">
                 <h3 class="h3 skills-title">My skills</h3>
                 <ul class="skills-list content-card">
+                    {% for skill in skills %}
                     <li class="skills-item">
                         <div class="title-wrapper">
-                            <h5 class="h5">lorem ipsum</h5>
-                            <data value="80">80%</data>
-                        </div>
-                        <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 80%;"></div>
-                        </div>
-                    </li>
-                    <li class="skills-item">
-                        <div class="title-wrapper">
-                            <h5 class="h5">lorem ipsum</h5>
-                            <data value="70">70%</data>
-                        </div>
-                        <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 70%;"></div>
-                        </div>
-                    </li>
-                    <li class="skills-item">
-                        <div class="title-wrapper">
-                            <h5 class="h5">lorem ipsum</h5>
-                            <data value="90">90%</data>
-                        </div>
-                        <div class="skill-progress-bg">
-                            <div class="skill-progress-fill" style="width: 90%;"></div>
-                        </div>
-                    </li>
-                    <li class="skills-item">
-                        <div class="title-wrapper">
-                            <h5 class="h5">lorem ipsum</h5>
-                            <data value="50">50%</data>
+                            <h5 class="h5">{{ skill.title}}</h5>
+                            <data value="50">({{ skill.percent }}%)</data>
                         </div>
                         <div class="skill-progress-bg">
                             <div class="skill-progress-fill" style="width: 50%;"></div>
                         </div>
                     </li>
+                    {% endfor %}
                 </ul>
             </section>
             
