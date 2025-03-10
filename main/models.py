@@ -17,7 +17,7 @@ class About(models.Model):
         return f'{self.title} ({self.text})'
 
 class Basic(models.Model):
-     image = models.ImageField(upload_to='images/avatar.png')
+     avatar = models.ImageField(upload_to='photos/avatars/sa-', blank=True)
      name = models.CharField(max_length=30, blank=True)
      title = models.CharField(max_length=30, blank=True)
      email = models.EmailField(blank=True)
