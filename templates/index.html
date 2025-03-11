@@ -158,18 +158,17 @@
                     <div class="icon-box">
                         <ion-icon name="book-outline"></ion-icon>
                     </div>
-                    <h3 class="h3">Research Background</h3>
+                    <h3 class="h3">Additional Activities</h3>
                 </div>
-                {% for research in researches %}
+                {% for activity in activities %}
                 <ol class="timeline-list">
                     <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">{{ research.text|safe}}</h4>
-                        <span>({{ research.date}})</span>
+                        <h4 class="h4 timeline-item-title">{{ activity.text|safe}}</h4>
+                        <span>({{ activity.date}})</span>
                     </li>
                 </ol>
                     <br>
                 {% endfor %}
-            
             </section>
                 <div class="filter-select-box">
                     <button class="filter-select" data-select>
