@@ -39,3 +39,11 @@ class Academic(models.Model):
     def __str__(self):
         return f'{self.title}'
 
+
+class Course(models.Model):
+    name = models.CharField(max_length=50, blank=True)
+    date = models.CharField(max_length=50, blank=True)
+    text = RichTextField(blank=True)
+
+    def __str__(self):
+        return f'{self.name}'

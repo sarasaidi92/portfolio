@@ -99,6 +99,24 @@
                 </ol>
                     <br>
                  {% endfor %}
+             <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
+                    <h3 class="h3">Courses</h3>
+                </div>
+              {% for course in courses %}
+                <ol class="timeline-list">
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">{{ course.name}}</h4>
+                        <span>{{ course.date }}</span>
+                        <p class="timeline-text">
+                            {{course.text|safe}}
+                        </p>
+                    </li>
+                </ol>
+                 {% endfor %}
+            
             </section>
         </article>
         <article class="experience" data-page="experience">
