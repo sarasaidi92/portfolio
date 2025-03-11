@@ -7,9 +7,9 @@ class SkillAdmin(admin.ModelAdmin):
     list_editable = ['percent']
 
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ['title', 'text']
+    list_display = ['id', 'title']
     list_display_links = ['title']
-    list_editable = ['text']
+
 
 class BasicAdmin(admin.ModelAdmin):
     list_display = ['name','title']

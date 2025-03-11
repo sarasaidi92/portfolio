@@ -26,7 +26,6 @@ class Basic(models.Model):
      location = models.CharField(max_length=30, blank=True)
      linkedin = models.TextField(blank=True)
      github = models.URLField(blank=True)
-     instagram = models.TextField(blank=True)
 
      def __str__(self):
          return f'{self.title}'
