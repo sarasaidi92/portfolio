@@ -85,43 +85,20 @@
                     <div class="icon-box">
                         <ion-icon name="book-outline"></ion-icon>
                     </div>
-                    <h3 class="h3">Education</h3>
+                    <h3 class="h3">Academic</h3>
                 </div>
+                {% for academic in academics %}
                 <ol class="timeline-list">
                     <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Lorem ipsum</h4>
-                        <span>1995 — 1996</span>
+                        <h4 class="h4 timeline-item-title">{{ academic.name}}</h4>
+                        <span>{{ academic.date }}</span>
                         <p class="timeline-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue
-                            mauris rhoncus
-                            aenean vel elit scelerisque
-                        </p>
-                    </li>
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Lorem ipsum</h4>
-                        <span>1995 — 1996</span>
-                        <p class="timeline-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue
-                            mauris rhoncus
-                            aenean vel elit scelerisque
-                        </p>
-                    </li>
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Lorem ipsum</h4>
-                        <span>1995 — 1996</span>
-                        <p class="timeline-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue
-                            mauris rhoncus
-                            aenean vel elit scelerisque
+                            {{academic.text|safe}}
                         </p>
                     </li>
                 </ol>
+                    <br>
+                 {% endfor %}
             </section>
         </article>
         <article class="experience" data-page="experience">

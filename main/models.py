@@ -30,4 +30,12 @@ class Basic(models.Model):
      def __str__(self):
          return f'{self.title}'
 
+class Academic(models.Model):
+    title = models.CharField(max_length=50, blank=True)
+    name = models.CharField(max_length=100, blank=True)
+    date = models.CharField(max_length=50, blank=True)
+    text = RichTextField(blank=True)
+
+    def __str__(self):
+        return f'{self.title}'
 

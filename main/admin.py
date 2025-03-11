@@ -1,5 +1,5 @@
 from django.contrib import admin
-from.models import Skill, About, Basic
+from.models import Skill, About, Basic, Academic
 
 class SkillAdmin(admin.ModelAdmin):
     list_display = ['title', 'percent']
@@ -15,10 +15,17 @@ class BasicAdmin(admin.ModelAdmin):
     list_display = ['name','title']
     list_display_links = ['title']
 
+class AcademicAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name']
+    list_display_links = ['name']
+
+
+
 
 admin.site.register(Skill, SkillAdmin)
 admin.site.register(About, AboutAdmin)
 admin.site.register(Basic, BasicAdmin)
+admin.site.register(Academic, AcademicAdmin)
 
 
 
