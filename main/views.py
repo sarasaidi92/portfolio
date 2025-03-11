@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from.models import Skill, About, Basic, Academic, Course
+from.models import *
 
 
 def index(request):
@@ -9,6 +9,9 @@ def index(request):
     basics = Basic.objects.all()
     academics = Academic.objects.all()
     courses = Course.objects.all()
+    researches = Research.objects.all()
+    works = Work.objects.all()
+    activities = Activity.objects.all()
 
     context = {
         'skills': skills,
@@ -16,6 +19,9 @@ def index(request):
         'basics': basics,
         'academics': academics,
         'courses': courses,
+        'researches': researches,
+        'works': works,
+        'activities': activities
 
     }
     return render(request,template_name='index.html', context=context)

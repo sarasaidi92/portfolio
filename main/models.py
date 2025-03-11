@@ -47,3 +47,15 @@ class Course(models.Model):
 
     def __str__(self):
         return f'{self.name}'
+
+class Research(models.Model):
+    text = RichTextField(blank=True)
+    date = models.CharField(max_length=50, blank=True)
+
+class Work(models.Model):
+    text = RichTextField(blank=True)
+    date = models.CharField(max_length=50, blank=True)
+
+class Activity(models.Model):
+    text = RichTextField(blank=True)
+    date = models.CharField(max_length=50, blank=True)

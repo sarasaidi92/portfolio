@@ -128,43 +128,48 @@
                     <div class="icon-box">
                         <ion-icon name="book-outline"></ion-icon>
                     </div>
-                    <h3 class="h3">Experience</h3>
+                    <h3 class="h3">Research Background</h3>
                 </div>
+                {% for research in researches %}
                 <ol class="timeline-list">
                     <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Lorem ipsum</h4>
-                        <span>1995 — 1996</span>
-                        <p class="timeline-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue
-                            mauris rhoncus
-                            aenean vel elit scelerisque
-                        </p>
-                    </li>
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Lorem ipsum</h4>
-                        <span>1995 — 1996</span>
-                        <p class="timeline-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue
-                            mauris rhoncus
-                            aenean vel elit scelerisque
-                        </p>
-                    </li>
-                    <li class="timeline-item">
-                        <h4 class="h4 timeline-item-title">Lorem ipsum</h4>
-                        <span>1995 — 1996</span>
-                        <p class="timeline-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et
-                            dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus vitae congue
-                            mauris rhoncus
-                            aenean vel elit scelerisque
-                        </p>
+                        <h4 class="h4 timeline-item-title">{{ research.text|safe}}</h4>
+                        <span>({{ research.date}})</span>
                     </li>
                 </ol>
+                    <br>
+                {% endfor %}
+             <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
+                    <h3 class="h3">Work Experience</h3>
+                </div>
+                {% for work in works %}
+                <ol class="timeline-list">
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">{{ work.text|safe}}</h4>
+                        <span>({{ work.date}})</span>
+                    </li>
+                </ol>
+                    <br>
+                {% endfor %}
+              <div class="title-wrapper">
+                    <div class="icon-box">
+                        <ion-icon name="book-outline"></ion-icon>
+                    </div>
+                    <h3 class="h3">Research Background</h3>
+                </div>
+                {% for research in researches %}
+                <ol class="timeline-list">
+                    <li class="timeline-item">
+                        <h4 class="h4 timeline-item-title">{{ research.text|safe}}</h4>
+                        <span>({{ research.date}})</span>
+                    </li>
+                </ol>
+                    <br>
+                {% endfor %}
+            
             </section>
                 <div class="filter-select-box">
                     <button class="filter-select" data-select>
