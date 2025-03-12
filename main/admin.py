@@ -1,6 +1,7 @@
 from django.contrib import admin
 from.models import *
 
+
 class SkillAdmin(admin.ModelAdmin):
     list_display = ['title', 'percent']
     list_display_links = ['title']
@@ -43,4 +44,5 @@ admin.site.register(Course, CourseAdmin)
 admin.site.register(Research, ResearchAdmin)
 admin.site.register(Work, WorkAdmin)
 admin.site.register(Activity, ActivityAdmin)
+admin.site.register(Main)
 

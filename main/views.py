@@ -12,6 +12,7 @@ def index(request):
     researches = Research.objects.all()
     works = Work.objects.all()
     activities = Activity.objects.all()
+    main = Main.objects.all()[0]
 
     context = {
         'skills': skills,
@@ -21,7 +22,8 @@ def index(request):
         'courses': courses,
         'researches': researches,
         'works': works,
-        'activities': activities
+        'activities': activities,
+        'main': main,
 
     }
     return render(request,template_name='index.html', context=context)

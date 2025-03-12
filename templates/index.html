@@ -185,21 +185,21 @@
             </header>
             <section class="mapbox" data-mapbox>
                 <figure>
-                    <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21787.057070948435!2d51.48860451249146!3d35.734446453624436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e02dbb06b6d2b%3A0x655bd7992293f2ab!2sNarmak%2C%20Tehran%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1741084327408!5m2!1sen!2s"
-                            width="400" height="300" loading="lazy"></iframe>
+                    {{ main.map|safe }}
                 </figure>
             </section>
             <section class="contact-form">
                 <h3 class="h3 form-title">Contact Form</h3>
-                <form action="#" class="form" data-form>
+                <form method="post"  action="{% url 'index' %}"   class="form" data-form>
+                    
+                    {% csrf_token %}
                     <div class="input-wrapper">
-                        <input type="text" name="fullname" class="form-input" placeholder="Full name" required
+                        <input type="text" name="{{ contact.name }}" class="form-input" placeholder="Full name" required
                                data-form-input>
-                        <input type="email" name="email" class="form-input" placeholder="Email address" required
+                        <input type="email" name="{{ contact.email }}" class="form-input" placeholder="Email address" required
                                data-form-input>
                     </div>
-                    <textarea name="message" class="form-input" placeholder="Your Message" required
+                    <textarea name="{{ contact.message }}" class="form-input" placeholder="Your Message" required
                               data-form-input></textarea>
                     <button class="form-btn" type="submit" data-form-btn>
                         <ion-icon name="paper-plane"></ion-icon>
